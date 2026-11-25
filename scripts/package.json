@@ -1,0 +1,21 @@
+{
+  "name": "unslop-angular-scan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scan déterministe du skill unslop-angular",
+  "type": "module",
+  "bin": {
+    "unslop-angular-scan": "./scan.mjs"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "angular-eslint": "^22.8.0",
+    "eslint": "^10.0.1",
+    "eslint-plugin-rxjs-x": "^1.0.6",
+    "rxjs": "^7.8.0",
+    "typescript": ">=5.9.0 <6.1.0",
+    "typescript-eslint": "^8.74.0"
+  }
+}

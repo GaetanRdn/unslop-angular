@@ -101,7 +101,7 @@ Provisional bands, from 8 calibration codebases (Angular 20 to 22):
 
 Inspired by [unslop](https://github.com/heydamir/unslop) by Damir Sokolovsky, which does the same for AI-looking UI. Built on [angular-eslint](https://github.com/angular-eslint/angular-eslint), [typescript-eslint](https://typescript-eslint.io) and [eslint-plugin-rxjs-x](https://github.com/JasonWeinzierl/eslint-plugin-rxjs-x).
 
-Made by [GaetanRdn](https://github.com/GaetanRdn) · part of the AngularKit ecosystem.
+Made by [Gaetan Redin](https://github.com/GaetanRdn) · part of the AngularKit ecosystem.
 
 ## License
 

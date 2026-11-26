@@ -1,0 +1,12 @@
+{
+  "name": "unslop-angular",
+  "owner": { "name": "Gaetan Redin", "url": "https://github.com/GaetanRdn" },
+  "description": "unslop-angular : audit et nettoyage du code Angular produit avec l'IA.",
+  "plugins": [
+    {
+      "name": "unslop-angular",
+      "source": "./",
+      "description": "Audite le code Angular produit avec l'IA, donne un score reproductible, puis corrige par passes validées."
+    }
+  ]
+}

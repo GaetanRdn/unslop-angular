@@ -29,31 +29,44 @@ None of this breaks the build. All of it costs you later.
 
 ## Install
 
-```bash
-# For you, in every project
-git clone https://github.com/GaetanRdn/unslop-angular ~/.claude/skills/unslop-angular
+As a Claude Code plugin (Claude Code 2.1.275 or later):
 
-# Or for one project
-git clone https://github.com/GaetanRdn/unslop-angular .claude/skills/unslop-angular
+```
+/plugin install unslop-angular --marketplace GaetanRdn/unslop-angular
 ```
 
-The skill installs the scanner's dependencies (`scripts/node_modules`) on first run. Nothing is added to your project.
+Or in two steps, on any version with plugin support:
+
+```
+/plugin marketplace add GaetanRdn/unslop-angular
+/plugin install unslop-angular@unslop-angular
+```
+
+Without the plugin system, copy the skill folder into your skills:
+
+```bash
+git clone --depth 1 https://github.com/GaetanRdn/unslop-angular /tmp/unslop-angular
+cp -r /tmp/unslop-angular/skills/unslop-angular ~/.claude/skills/
+```
+
+The skill installs the scanner's dependencies (`scripts/node_modules`, inside the skill folder) on first run. Nothing is added to your project.
 
 Requirements: Node ≥ 20.19, your project's dependencies installed (the scan needs Angular and RxJS types), git for the diff mode.
 
 ## Usage
 
-In Claude Code:
+In Claude Code, ask in plain words, or call the skill directly (`/unslop-angular:unslop-angular` as a plugin, `/unslop-angular` as a copied skill):
 
 ```
-/unslop-angular
-/unslop-angular audit the whole codebase
-/unslop-angular src/app/features/billing
+audit the AI-written code on this branch
+/unslop-angular:unslop-angular the whole codebase
+/unslop-angular:unslop-angular src/app/features/billing
 ```
 
 The scanner also runs on its own, for CI:
 
 ```bash
+cd skills/unslop-angular
 npm install --prefix scripts
 node scripts/scan.mjs --project <angular-workspace> [--base main | --all | <files or folders…>] \
   [--out .unslop/scan.json] [--fail-above <score>]
@@ -85,7 +98,7 @@ Provisional bands, from 8 calibration codebases (Angular 20 to 22):
 
 ## Rules
 
-36 signs in 7 families (yesterday's Angular, reactivity, RxJS and leaks, typing, architecture, templates/a11y/security, AI writing habits), each with a severity and a fix: see [`references/catalogue-regles.md`](references/catalogue-regles.md) (French).
+36 signs in 7 families (yesterday's Angular, reactivity, RxJS and leaks, typing, architecture, templates/a11y/security, AI writing habits), each with a severity and a fix: see [`catalogue-regles.md`](skills/unslop-angular/references/catalogue-regles.md) (French).
 
 - 16 rely on existing ESLint plugins, 13 are custom checks, 7 need the agent's judgment.
 - Rules follow the project's Angular version: `standalone: true` is only flagged from v19, explicit `OnPush` only from v22, zone.js only from v21…

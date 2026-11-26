@@ -1,0 +1,10 @@
+{
+  "name": "unslop-angular",
+  "description": "Audite le code Angular produit avec l'IA (syntaxe d'hier, fuites RxJS, signals mal utilisés, erreurs avalées, tics d'écriture), donne un score reproductible, puis corrige par passes validées.",
+  "version": "0.4.0",
+  "author": { "name": "Gaetan Redin", "url": "https://github.com/GaetanRdn" },
+  "homepage": "https://github.com/GaetanRdn/unslop-angular",
+  "repository": "https://github.com/GaetanRdn/unslop-angular",
+  "license": "MIT",
+  "keywords": ["angular", "audit", "ai-generated-code", "slop", "eslint", "signals", "rxjs"]
+}

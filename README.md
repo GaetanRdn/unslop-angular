@@ -6,6 +6,8 @@
 
 > Reports and fix summaries are written in **French**.
 
+Demo (60 s, in French): [`docs/unslop-angular-demo-fr.mp4`](docs/unslop-angular-demo-fr.mp4)
+
 ## Why
 
 Coding agents learned Angular from years of old code. Ask one for a feature in an Angular 21 app and you often get:
